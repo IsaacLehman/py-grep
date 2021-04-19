@@ -10,16 +10,15 @@ white = '\033[39m'
 clear_top = '\033[2J'
 # Using '*' pattern
 print(clear_top)
-print(green)
 print("Your current working directory: ", os.getcwd())
 print("Items in current directory:")
 print('  |  '.join(os.listdir()))
-print()
+print(green)
 print("--------------------------------------------")
 starting_path = input("Enter the path to search on: ")
 search_arg    = input("Enter your search argument: ")
 print("--------------------------------------------")
-print()
+print(white)
 def print_dir(path, search):
     num_errors = 0
     num_files  = 0
@@ -44,7 +43,7 @@ def print_dir(path, search):
 
 finds = []
 num_files, num_errors = print_dir(starting_path+'/*', search_arg)
-print(green+"# Non-Readable Files: ", num_errors)
+print("# Non-Readable Files: ", num_errors)
 print("# Readable Files: ", num_files)
 print()
 print("Line #\t\tFile Path", white)
