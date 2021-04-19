@@ -1,3 +1,6 @@
+'''
+BY: Isaac Lehman
+'''
 import glob
 import os
 import sys
